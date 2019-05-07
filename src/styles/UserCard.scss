@@ -1,0 +1,55 @@
+.user-card {
+  border-left: 3px solid rgba(95, 95, 95, 0.14);
+  .card-cover {
+    height: 290px;
+    text-align: center;
+
+    img.background {
+      width: 100%;
+      -webkit-filter: url(#svg-blur);
+      filter: url(#svg-blur);
+      height: 290px;
+    }
+
+    #svg-filter {
+      display: none;
+    }
+
+    .person-identifier{
+      position: relative;
+      bottom: 245px;
+
+      img.thumbnail {
+        border-radius: 128px;
+
+
+      }
+      .name-cover{
+        display: block;
+        color: #ffffff;
+        font-weight: 600;
+        font-size: 20px;
+        text-transform: capitalize;
+        margin-top: 35px;
+        margin-bottom: 0px;
+
+      }
+      .type-cover{
+        color: #ffffff;
+      }
+    }
+
+  }
+  .card-description{
+    .label-card{
+      font-size: 12px;
+      color: #828282;
+      font-weight: 500;
+      display: block;
+    }
+    .text-card{
+      font-weight: 500;
+      margin-top: 10px;
+    }
+  }
+}

@@ -1310,7 +1310,6 @@ const okResultsResponse = [
   },];
 const peopleOkExpectedActions = [
   { type: `GET_${modelConst}_LOADING`, isLoading: true },
-  { type: `GET_${modelConst}_SUCCESS`, response: okResultsResponse },
   { type: `GET_${modelConst}_LOADING`, isLoading: false },
 ];
 
@@ -1333,14 +1332,10 @@ describe('actions', () => {
         'content-type': 'application/json',
       },
     });
-    const expectedActions = [
-      ...peopleOkExpectedActions,
-    ];
     const store = mockStore({});
 
     return store.dispatch(actions.getPeople()).then(() => {
-      expect(store.getActions()).
-        toEqual(expect.arrayContaining(expectedActions));
+      expect(store.getActions()).toEqual(expect.arrayContaining(peopleOkExpectedActions));
     });
   });
 });
