@@ -1,32 +1,45 @@
 // @flow
-const modelConst = 'PEOPLE';
+const modelConst = 'POKEMON';
 
 type State = {
-  list: Array<Object>,
+  list: Object,
   error: Object,
   message: string,
+  object: Object
+
 };
 
-export default function people(state: State = {
+export default function pokemon(state: State = {
   error: {},
-  list: [],
+  list: {},
   message: "",
+  object: {}
 }, action: Object) {
   switch (action.type) {
-    case `GET_${modelConst}_SUCCESS`:
+    case `GET_${modelConst}_LIST_SUCCESS`:
       return {
         ...state,
         list: action.response,
         message: action.type,
         error: {},
       };
+    case `GET_${modelConst}_SUCCESS`:
+      return {
+        ...state,
+        object: action.response,
+        message: action.type,
+        error: {},
+      };
+    case `GET_${modelConst}_LIST_ERROR`:
     case `GET_${modelConst}_ERROR`:
       return {
         ...state,
-        list: [],
+        list: {},
+        object: {},
         message: action.type,
         error: action.response,
       };
+    case `GET_${modelConst}_LIST_LOADING`:
     case `GET_${modelConst}_LOADING`:
       return {
         ...state,

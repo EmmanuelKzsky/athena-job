@@ -1,8 +1,10 @@
-.user-card {
-  border-left: 3px solid rgba(95, 95, 95, 0.14);
+.pokemon-card {
+  border:1px solid rgba(0,0,0,.125);
   .card-cover {
     height: 290px;
     text-align: center;
+    border-bottom:1px solid rgba(0,0,0,.125);
+
 
     img.background {
       width: 100%;
@@ -15,7 +17,7 @@
       display: none;
     }
 
-    .person-identifier{
+    .pokemon-identifier{
       position: relative;
       bottom: 245px;
 
@@ -26,7 +28,7 @@
       }
       .name-cover{
         display: block;
-        color: #ffffff;
+        color: #000000;
         font-weight: 600;
         font-size: 20px;
         text-transform: capitalize;
@@ -35,7 +37,7 @@
 
       }
       .type-cover{
-        color: #ffffff;
+        color: #000000;
       }
     }
 

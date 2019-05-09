@@ -43,6 +43,7 @@
     "jsx-quotes": 1,
     "react/default-props-match-prop-types": ["error", { "allowRequiredDefaults": true }],
     "react/prop-types": 0,
+    "react/no-children-prop": 0,
     "react/jsx-boolean-value": 1,
     "react/jsx-closing-bracket-location": 0,
     "react/jsx-curly-spacing": 1,

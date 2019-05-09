@@ -1,6 +1,6 @@
 import { connect } from 'react-redux';
 
-import App from '../App';
+import PokemonCard from '../Components/Pokemon/PokemonCard/PokemonCard';
 import * as actions from '../actions';
 
 export function mapStateToProps(state) {
@@ -12,7 +12,7 @@ export function mapStateToProps(state) {
 
 export function mapDispatchToProps(dispatch) {
   return {
-    getPokemonsList: (params) => dispatch(actions.getPokemonsList(params)),
+    getPokemon: (name) => dispatch(actions.getPokemon(name)),
   };
 }
 
@@ -24,4 +24,4 @@ export default connect(
   mapStateToProps,
   mapDispatchToProps,
   mergeProps,
-)(App);
+)(PokemonCard);
